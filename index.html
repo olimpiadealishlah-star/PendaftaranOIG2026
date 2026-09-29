@@ -146,7 +146,7 @@
                     </h3>
 
                     <!-- Informasi Pembayaran Premium Card -->
-                    <div class="bg-gradient-to-br from-blue-50 to-sky-100/50 border border-blue-200 rounded-2xl p-6 relative overflow-hidden">
+                    <div class="bg-gradient-to-br from-blue-50 to-sky-100/50 border border-blue-200 rounded-2xl p-6 relative overflow-hidden mb-2">
                         <!-- Decorative circle -->
                         <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
                         
@@ -171,16 +171,32 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <!-- Informasi Follow Sosmed -->
+                    <div class="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 border border-purple-200 rounded-2xl p-5 relative overflow-hidden">
+                        <div class="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-4">
+                            <div class="bg-white p-3 rounded-xl shadow-sm text-purple-600">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                            </div>
+                            <div class="text-center sm:text-left">
+                                <h4 class="text-sm font-bold text-slate-800 mb-1">Syarat Tambahan Wajib!</h4>
+                                <p class="text-sm text-slate-600 mb-3">Peserta wajib mem-follow akun <strong>Instagram, TikTok, dan Facebook</strong> resmi SMA IT Al Ishlah Gorontalo:</p>
+                                <span class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold px-4 py-1.5 rounded-lg text-sm shadow-md">
+                                    @Smaitalishlah
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                         <!-- Upload Kartu Siswa -->
                         <div class="relative group">
-                            <label for="kartuSiswa" class="block text-sm font-semibold text-slate-700 mb-1.5">Kartu Siswa (Max 2MB)</label>
+                            <label for="kartuSiswa" class="block text-sm font-semibold text-slate-700 mb-1.5 text-center">Kartu Siswa</label>
                             <div class="flex items-center justify-center w-full">
-                                <label for="kartuSiswa" class="flex flex-col items-center justify-center w-full h-32 border-2 border-slate-300 border-dashed rounded-xl cursor-pointer bg-slate-50 group-hover:bg-blue-50 group-hover:border-blue-400 transition-all">
+                                <label for="kartuSiswa" class="flex flex-col items-center justify-center w-full h-32 border-2 border-slate-300 border-dashed rounded-xl cursor-pointer bg-slate-50 group-hover:bg-blue-50 group-hover:border-blue-400 transition-all text-center px-2">
                                     <div class="flex flex-col items-center justify-center pt-5 pb-6">
                                         <svg class="w-8 h-8 mb-2 text-slate-400 group-hover:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
-                                        <p class="mb-2 text-sm text-slate-500"><span class="font-semibold">Klik untuk unggah</span> atau drag and drop</p>
-                                        <p class="text-xs text-slate-400" id="nameKartu">Format: JPG, PNG, PDF</p>
+                                        <p class="mb-1 text-xs text-slate-500 font-semibold">Klik/Drop (Max 2MB)</p>
+                                        <p class="text-[10px] text-slate-400" id="nameKartu">Format: JPG, PNG, PDF</p>
                                     </div>
                                     <input type="file" id="kartuSiswa" name="kartuSiswa" accept="image/*,application/pdf" required class="hidden" onchange="updateFileName('kartuSiswa', 'nameKartu')">
                                 </label>
@@ -189,15 +205,30 @@
 
                         <!-- Upload Bukti Bayar -->
                         <div class="relative group">
-                            <label for="buktiBayar" class="block text-sm font-semibold text-slate-700 mb-1.5">Bukti Pembayaran (Max 2MB)</label>
+                            <label for="buktiBayar" class="block text-sm font-semibold text-slate-700 mb-1.5 text-center">Bukti Bayar</label>
                             <div class="flex items-center justify-center w-full">
-                                <label for="buktiBayar" class="flex flex-col items-center justify-center w-full h-32 border-2 border-slate-300 border-dashed rounded-xl cursor-pointer bg-slate-50 group-hover:bg-blue-50 group-hover:border-blue-400 transition-all">
+                                <label for="buktiBayar" class="flex flex-col items-center justify-center w-full h-32 border-2 border-slate-300 border-dashed rounded-xl cursor-pointer bg-slate-50 group-hover:bg-blue-50 group-hover:border-blue-400 transition-all text-center px-2">
                                     <div class="flex flex-col items-center justify-center pt-5 pb-6">
                                         <svg class="w-8 h-8 mb-2 text-slate-400 group-hover:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                                        <p class="mb-2 text-sm text-slate-500"><span class="font-semibold">Klik untuk unggah</span> atau drag and drop</p>
-                                        <p class="text-xs text-slate-400" id="nameBukti">Format: JPG, PNG, PDF</p>
+                                        <p class="mb-1 text-xs text-slate-500 font-semibold">Klik/Drop (Max 2MB)</p>
+                                        <p class="text-[10px] text-slate-400" id="nameBukti">Format: JPG, PNG, PDF</p>
                                     </div>
                                     <input type="file" id="buktiBayar" name="buktiBayar" accept="image/*,application/pdf" required class="hidden" onchange="updateFileName('buktiBayar', 'nameBukti')">
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Upload Bukti Follow -->
+                        <div class="relative group">
+                            <label for="buktiFollow" class="block text-sm font-semibold text-slate-700 mb-1.5 text-center">Bukti SS Follow</label>
+                            <div class="flex items-center justify-center w-full">
+                                <label for="buktiFollow" class="flex flex-col items-center justify-center w-full h-32 border-2 border-slate-300 border-dashed rounded-xl cursor-pointer bg-slate-50 group-hover:bg-purple-50 group-hover:border-purple-400 transition-all text-center px-2">
+                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg class="w-8 h-8 mb-2 text-slate-400 group-hover:text-purple-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                        <p class="mb-1 text-xs text-slate-500 font-semibold">Klik/Drop (Max 2MB)</p>
+                                        <p class="text-[10px] text-slate-400" id="nameFollow">Format: JPG, PNG</p>
+                                    </div>
+                                    <input type="file" id="buktiFollow" name="buktiFollow" accept="image/*" required class="hidden" onchange="updateFileName('buktiFollow', 'nameFollow')">
                                 </label>
                             </div>
                         </div>
@@ -226,7 +257,7 @@
     <script>
         // ======= PENTING =======
         // GANTI URL DI BAWAH DENGAN URL DEPLOY WEB APP GOOGLE APPS SCRIPT ANDA
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyC4GlQpiuWoQxlgtscIL8mVkwC_Jjtgt6ARxZlmG8WZXhOq4hcDpBVOA-cYHhD6C1Q/exec'; 
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyl_sAGleRHP2hx4LcYgo66Uj13FrWkrcvwM2AvJhv6O4AKWZgQKwx5IVnwNqHHPLIG/exec'; 
         // =======================
 
         // Update Text Info saat File Dipilih
@@ -274,14 +305,15 @@
 
             const fileKartu = form.kartuSiswa.files[0];
             const fileBukti = form.buktiBayar.files[0];
+            const fileFollow = form.buktiFollow.files[0];
             const maxMB = 2 * 1024 * 1024; // 2MB
 
             // Validasi ukuran file
-            if ((fileKartu && fileKartu.size > maxMB) || (fileBukti && fileBukti.size > maxMB)) {
+            if ((fileKartu && fileKartu.size > maxMB) || (fileBukti && fileBukti.size > maxMB) || (fileFollow && fileFollow.size > maxMB)) {
                 Swal.fire({
                     icon: 'error',
                     title: 'Ukuran File Terlalu Besar',
-                    text: 'Maksimal ukuran file Kartu Siswa dan Bukti Pembayaran adalah 2MB.',
+                    text: 'Maksimal ukuran setiap file (Kartu Siswa, Bukti Bayar, Bukti Follow) adalah 2MB.',
                     confirmButtonColor: '#ef4444'
                 });
                 return;
@@ -300,6 +332,7 @@
                 // Konversi ke Base64
                 const kartuBase64 = await convertBase64(fileKartu);
                 const buktiBase64 = await convertBase64(fileBukti);
+                const followBase64 = await convertBase64(fileFollow);
 
                 // Buat Payload
                 const dataPayload = {
@@ -309,7 +342,8 @@
                     asalSekolah: form.asalSekolah.value,
                     mapel: form.mapel.value,
                     kartuSiswa: kartuBase64,
-                    buktiBayar: buktiBase64
+                    buktiBayar: buktiBase64,
+                    buktiFollow: followBase64
                 };
 
                 // Kirim ke Google Script
@@ -333,6 +367,7 @@
                         form.reset();
                         document.getElementById('nameKartu').innerText = "Format: JPG, PNG, PDF";
                         document.getElementById('nameBukti').innerText = "Format: JPG, PNG, PDF";
+                        document.getElementById('nameFollow').innerText = "Format: JPG, PNG";
                         window.location.href = 'https://chat.whatsapp.com/BkggHhUcn8CLQfY9XwbESs';
                     });
                 } else {
