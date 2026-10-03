@@ -368,7 +368,9 @@
                         document.getElementById('nameKartu').innerText = "Format: JPG, PNG, PDF";
                         document.getElementById('nameBukti').innerText = "Format: JPG, PNG, PDF";
                         document.getElementById('nameFollow').innerText = "Format: JPG, PNG";
-                        window.location.href = 'https://chat.whatsapp.com/BkggHhUcn8CLQfY9XwbESs?s=sh&p=a&ilr=4&iam=2';
+                        
+                        // PERBAIKAN: Membuka link WhatsApp di Tab Baru/Aplikasi agar tidak diblokir oleh iFrame website sekolah
+                        window.open('https://chat.whatsapp.com/BkggHhUcn8CLQfY9XwbESs?s=sh&p=a&ilr=4&iam=2', '_blank');
                     });
                 } else {
                     throw new Error(result.error || "Terjadi kesalahan internal server.");
